@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  hub:
+    uses: blackdiamondlodge/bdh-sdk/.github/workflows/app-ci.yml@v0
+    with:
+      app_id: feedback
+      # The hub's top-bar support for this app lands with BlackDiamondHub's
+      # feedback-app-hooks branch; go back to main once that has merged.
+      hub_ref: feedback-app-hooks
+      selenium: false

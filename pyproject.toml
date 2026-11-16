@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bdh-app-feedback"
+version = "1.0.0"
+description = "Black Diamond Hub app: guest feedback inbox behind the top bar's feedback pill"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "bdh-sdk>=0.29,<1",
+]
+
+[project.urls]
+Source = "https://github.com/blackdiamondlodge/bdh-app-feedback"
+
+[project.entry-points."blackdiamondhub.plugins"]
+feedback = "feedback.plugin:spec"
+
+[tool.setuptools.packages.find]
+include = ["feedback", "feedback.*"]
+
+[tool.setuptools.package-data]
+feedback = [
+    "templates/**/*",
+    "static/**/*",
+    "migrations/*.py",
+]
