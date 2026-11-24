@@ -2,7 +2,7 @@
 
 Black Diamond Hub app: the inbox for messages sent from the hub's top-bar
 feedback pill. Installed into the hub through the `blackdiamondhub.plugins`
-entry point (see [bdh-sdk](https://github.com/blackdiamondlodge/bdh-sdk)).
+entry point (see [bdh-sdk](https://github.com/blackdiamondhub/bdh-sdk)).
 
 The app has no tile, and visitors never open it directly:
 
